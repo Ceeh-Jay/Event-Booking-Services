@@ -20,6 +20,10 @@ const connect = async () => {
     console.log("mongoDB disconnected!");
   });
 
+  //MIDDLEWARES
+  app.use(express.json());
+
+
 
 
 app.listen (8000, ()=> {
