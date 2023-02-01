@@ -55,9 +55,17 @@ export const getEvent = async (req, res, next) => {
 
 
 //GET EVENTS
-export const getEvents = async (req, res, next) => {
+export const getCurrentEvents = async (req, res, next) => {
     try {
-        const events = async 
+        // Get the current date
+    const currentDate = new Date();
+    // Find all events whose end date is greater than or equal to the current date
+    const allCurrentEvents = await Event.find({ endDate: { $gte: currentDate } });
+
+    //return all current event
+    return allCurrentEvents;
+    } catch {
+        next (err);
     }
-}
+};
 
