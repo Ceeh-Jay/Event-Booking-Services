@@ -57,7 +57,7 @@ export const getEvent = async (req, res, next) => {
 //GET EVENTS
 export const getEvents = async (req, res, next) => {
     try {
-        const hotels = async 
+        const events = async 
     }
 }
 
