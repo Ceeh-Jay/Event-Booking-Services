@@ -33,7 +33,7 @@ export const updateEvent = async (req, res, next) => {
 
 
 //DELETE EVENT
-export const deleteHotel = async (req, res, next) => {
+export const deleteEvent = async (req, res, next) => {
     try {
         await Event.findByIdAndDelete(req.params.id);
         res.status(200).json("You have deleted event successfully");
